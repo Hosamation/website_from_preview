@@ -1,0 +1,482 @@
+/* 428 line */
+/* Start Variables */
+:root {
+  --main-color: #2ecc71;
+}
+/* End Variables */
+/* Start Global Rules */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+h2, h3 {
+  color: #555;
+}
+p, q {
+  line-height: 1.6;
+  color: #666;
+}
+button {
+  background-color: transparent;
+  padding: 10px 15px;
+  font-size: 18px;
+  cursor: pointer;
+}
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+}
+/* Small Screen */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Meduim Screen */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large Screen */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End Global Rules */
+/* Start Header */
+
+header .slider {
+  background: url(../images/slider.jpg) no-repeat center;
+  background-size: cover;
+  height: 600px;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  text-align: center;
+}
+header .slider h1 {
+  width: fit-content;
+  padding: 10px;
+  margin: 15px auto;
+  color: #FFF;
+  border-top: 5px solid #FFF;
+  border-bottom: 5px solid #FFF;
+}
+header .slider button {
+  color: #FFF;
+  border: 3px solid #FFF;
+}
+header .slider button:hover {
+  background-color: var(--main-color);
+  border: 3px solid #82f8b3;
+  box-shadow: 0 0 10px var(--main-color);
+}
+header nav {
+  background-color: #252F31;
+  color: #FFF;
+}
+header nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav h2 {
+  color: #FFF;
+}
+header nav h2 span {
+  color: var(--main-color);
+}
+header nav ul {
+  list-style: none;
+  padding-left: 0;
+  /* overflow: hidden; */
+}
+header nav ul li {
+  float: left;
+  padding: 10px;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: #FFF;
+}
+header nav ul li:first-of-type a {
+  color: var(--main-color);
+}
+header nav ul li a:hover {
+  color: var(--main-color);
+}
+header nav i {
+  display: none;
+}
+@media (max-width: 991px) {
+  header nav nav{
+    position: relative;
+    padding: 5px 0;
+    margin-right: 10px;
+  }
+  header nav i {
+    display: block;
+    font-size: 25px;
+    padding: 0 2px;
+    border: 2px solid #FFF;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+  }
+  header nav i:hover {
+    border: 2px solid var(--main-color);
+  }
+  header nav ul {
+    display: none;
+    position: absolute;
+    width: 180px;
+    top: 65px;
+    right: -25px;
+    padding: 0 10px;
+    background-color: #00000099;
+  }
+  header nav ul::before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    right: 20px;
+    border-width: 20px;
+    border-style: solid;
+    border-color: transparent transparent #00000099 transparent;
+  }
+  /* ####### I Can Not Hover In ul li ####### */
+  header nav i:hover  + ul {
+    display: block;
+  }
+  header nav ul li {
+    float: none;
+  }
+  header nav ul li:not(:last-child) {
+    border-bottom: 2px solid #FFFFFF55;
+  }
+}
+/* End Header */
+/* Start Features */
+.features {
+  padding: 30px 0;
+}
+.features .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+/* End Features */
+/* Start About */
+.about {
+  background-color: #F2F2F2;
+}
+.about .container  {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-gap: 40px;
+}
+@media (min-width: 1200px) {
+  .about .container {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+.about .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about .image img {
+  max-width: 100%;
+}
+.about .about-info {
+  margin: 20px 0 20px 20px;
+}
+.about .about-info h2 {
+  margin: 10px 0;
+}
+.about .about-info > p{
+  margin: 40px 0;
+}
+.about .about-info .about-skills {
+  display: grid;
+  /* grid-template: repeat(2, 1fr) / repeat(2, 1fr); */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 40px 30px;
+  margin-top: 40px;
+}
+.about .about-info .about-skills .content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.about .about-info .about-skills .content i {
+  color: var(--main-color);
+  font-size: 30px;
+}
+/* End About */
+/* Start Skills */
+.my-skills {
+  padding: 40px 0;
+}
+.my-skills .container {
+  display: grid;
+  /* grid-template-columns: repeat(2,1fr); */
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  grid-gap: 20px;
+}
+.my-skills .skills {
+  margin: 20px 0 20px 20px;
+}
+.my-skills .skills h2 {
+  margin: 10px 0;
+}
+.my-skills .skills p:last-of-type {
+  margin: 40px 0;
+}
+.my-skills .skills button {
+  padding: 10px 30px;
+  color: var(--main-color);
+  border: 3px solid var(--main-color);
+}
+.my-skills .progress .language h3 {
+  margin-top: 30px;
+}
+.my-skills .progress .language div {
+  background-color: #F2F2F2;
+  height: 25px;
+}
+.my-skills .progress .language div span {
+  display: block;
+  background-color: var(--main-color);
+  margin: 20px 0;
+  line-height: 25px;
+  text-align: right;
+  color: #FFF;
+  font-weight: bold;
+}
+/* End Skills */
+/* Start Resume */
+.resume {
+  position: relative;
+  background-color: #F2F2F2;
+  padding: 30px 0;
+  text-align: center;
+}
+.resume::before {
+  content: '';
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  border-width: 30px;
+  border-style: solid;
+  border-color: #F2F2F2 transparent transparent;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+.resume p { 
+  padding: 0 40px;
+}
+.resume button {
+  padding: 10px 30px;
+  margin-top: 20px;
+  color: var(--main-color);
+  border: 3px solid var(--main-color);
+}
+/* ############################ Arrow in The End######################### */
+/* End Resume */
+/* Start Education */
+.my-edu-work {
+  padding: 40px 0;
+}
+.my-edu-work .container {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  grid-gap: 20px;
+}
+
+.my-edu-work .edu-work-info {
+  margin: 20px 0 20px 20px;
+}
+.my-edu-work .edu-work-info h2 {
+  margin: 10px 0;
+}
+.my-edu-work .edu-work-info p:last-of-type {
+  margin: 40px 0;
+}
+.my-edu-work .edu-work .certification {
+  margin-top: 70px;
+}
+.my-edu-work .edu-work .certification h3 {
+  margin: 10px 0;
+}
+.my-edu-work .edu-work .certification p:first-of-type {
+  font-weight: bold;
+}
+.my-edu-work .edu-work .certification p > span {
+  font-weight: normal;
+} 
+.my-edu-work .edu-work .certification p + span {
+  display: block;
+  width: fit-content;
+  background-color: var(--main-color);
+  color: #FFF;
+  font-weight: bold;
+  padding: 5px 10px;
+  margin: 5px 0 10px;
+}
+.my-edu-work .edu-work .certification hr {
+  margin: 20px 0;
+}
+/* End Education */
+/* Start Testemonials */
+.testemonials {
+  background-color: #F2F2F2;
+  padding: 40px 0;
+  text-align: center;
+}
+.testemonials q {
+  font-size: 18px;
+  font-style: italic;
+  font-weight: bold;
+}
+.testemonials h3 {
+  margin: 20px;
+}
+.testemonials ul {
+  list-style: none;
+}
+.testemonials ul li {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 2px solid var(--main-color);
+  cursor: pointer;
+}
+.testemonials ul li:nth-child(2),
+.testemonials ul li:hover {
+  background-color: var(--main-color);
+}
+  /* End Testemonials */
+  /* Start Portfolio */
+.portfolio {
+  padding: 30px 0;
+  text-align: center;
+}
+.portfolio h2 {
+  margin: 20px 0;
+}
+.portfolio p {
+  margin: 20px 0;
+}
+.portfolio .our-work {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+.portfolio .our-work > div img {
+  width: 100%;
+  border: 2px solid #FFF;
+  box-shadow: 0 0 15px #AAA;
+  cursor: pointer;
+}
+.portfolio .our-work > div img:hover {
+  box-shadow: 0 0 15px #555;
+}
+/* End Portfolio */
+/* Start Contact Me */
+.contact {
+  background-color: #252F31;
+  padding: 30px 0;
+}
+.contact .container {
+  display: grid;
+  /* grid-template-columns: repeat(2, 1fr); */
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  grid-gap: 60px;
+}
+.contact .info h2 {
+  color: #FFF;
+}
+.contact .info p {
+  color: #999;
+}
+.contact .info p:first-of-type {
+  margin: 20px 0;
+}
+.contact .info p strong {
+  color: #D1D6DA;
+}
+.contact .info address {
+  margin-bottom: 20px;
+  color: #999;
+}
+.contact form label {
+  display: block;
+  color: #D1D6DA;
+  margin: 5px;
+}
+.contact form input,
+textarea {
+  width: 70%;
+  margin-bottom: 10px;
+  background-color: #4B5557;
+  color: #FFF;
+  padding: 10px;
+  border: 0;
+}
+.contact form textarea {
+  height: 200px;
+}
+.contact form input[type="submit"] {
+  display: block;
+  width: fit-content;
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #191E22;
+  cursor: pointer;
+}
+/* End Contact Me */
+/* Start Footer */
+footer {
+  background-color: #191E22;
+  color: #6A6E71;
+  padding: 20px 0;
+  text-align: center;
+}
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer ul {
+  list-style: none;
+}
+footer ul li {
+  display: inline-block;
+}
+footer ul li a {
+  text-decoration: none;
+  color: #6A6E71;
+  font-size: 20px;
+}
+footer ul li a:hover {
+  color: #FFF;
+}
+/* End Footer */
